@@ -1,6 +1,6 @@
 name: "BUG 汇报"
 description: "软件运行过程中报错或者出现了不该有的东西……"
-labels: [Bug]
+labels: [BUG]
 body:
 - type: checkboxes
   id: "yml-1"
