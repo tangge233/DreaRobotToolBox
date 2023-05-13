@@ -1,9 +1,11 @@
 name: UpdateAppInfo
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types:
+      - closed
 
 jobs:
   PreEnvirAndUpdate:
@@ -14,7 +16,7 @@ jobs:
     steps:
       - name: Echo info
         run: |
-          echo "The action from ${{github.head_ref}} by ${{github.actor}}"
+          echo "The action is actived by ${{github.actor}}"
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,9 +27,7 @@ jobs:
           python-version: '3.9'
 
       - name: Run Index.py
-        if: ${{github.head_ref == 'refs/heads/dev'}}
         run: python Apps/Index.py
         
       - name: Synchronize
-        if: ${{github.head_ref == 'refs/heads/dev'}}
         run: git commit -m "Auto update index information - ${{ github.event_name }}"
