@@ -3,7 +3,7 @@ import json
 
 json_data = []
 
-print("Start runing...")
+print("Start preparing the Index file")
 
 for filename in os.listdir():
     #print("Current file:",filename)
@@ -17,6 +17,7 @@ for filename in os.listdir():
                     "Name" : data['Author']['Name'],
                     "HomePage" : data['Author']['HomePage']
                 },
+                "Desc" : data['Desc'],
                 "HomePage" : data['HomePage']
             }
             #print(ThisAppInfo)
@@ -26,4 +27,4 @@ for filename in os.listdir():
 with open('Index.json', 'w',encoding="utf-8") as f:
     json.dump(json_data, f,ensure_ascii = False)
 
-print("Operation end")
+print("Index file preparation completed")
