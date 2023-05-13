@@ -1,0 +1,22 @@
+name: UpdateAppInfo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  PreEnvirAndUpdate:
+    name: 准备环境并更新应用信息
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Run Index.py
+        run: python Apps/Index.py
