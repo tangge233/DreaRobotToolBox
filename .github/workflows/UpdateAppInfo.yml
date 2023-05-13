@@ -7,6 +7,8 @@ on:
 
 jobs:
   PreEnvirAndUpdate:
+    if: github.repository_owner == 'tangge233'
+    #只在主仓库运行
     name: 准备环境并更新应用信息
     runs-on: ubuntu-latest
     steps:
