@@ -8,7 +8,7 @@ on:
 jobs:
   PreEnvirAndUpdate:
     name: 准备环境并更新应用信息
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check branch
         run: |
