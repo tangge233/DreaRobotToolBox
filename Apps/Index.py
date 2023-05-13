@@ -3,7 +3,7 @@ import json
 
 json_data = []
 
-print("开始整理应用信息……")
+print("Start runing...")
 
 for filename in os.listdir():
     #print("Current file:",filename)
@@ -26,4 +26,4 @@ for filename in os.listdir():
 with open('Index.json', 'w',encoding="utf-8") as f:
     json.dump(json_data, f,ensure_ascii = False)
 
-print("操作结束")
+print("Operation end")
