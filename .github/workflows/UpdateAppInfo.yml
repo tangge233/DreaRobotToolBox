@@ -12,14 +12,6 @@ jobs:
     name: 准备环境并更新应用信息
     runs-on: ubuntu-latest
     steps:
-      - name: Check branch
-        run: |
-          if [ "${{ github.head_ref }}" = "refs/heads/dev" ]; then
-            echo "Push is from dev branch"
-          else
-            echo "Push is not from dev branch"
-            exit 1
-          fi
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -29,7 +21,9 @@ jobs:
           python-version: '3.9'
 
       - name: Run Index.py
+        if: ${{github.head_ref == 'refs/heads/dev'}}
         run: python Apps/Index.py
         
       - name: Synchronize
-        run: git commit -m "Auto update index information on ${{ steps.date.outputs.date }}"
+        if: ${{github.head_ref == 'refs/heads/dev'}}
+        run: git commit -m "Auto update index information - ${{ github.event_name }}"
