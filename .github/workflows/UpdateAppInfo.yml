@@ -29,5 +29,10 @@ jobs:
       - name: Run Index.py
         run: python Apps/Index.py
         
-      - name: Synchronize
-        run: git commit -m "Auto update index information - ${{ github.event_name }}"
+      - name: Commit changes
+        run: |
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --local user.name "${GITHUB_ACTOR}"
+          git add .
+          git commit -m "Auto commit index file by action"
+          git push
