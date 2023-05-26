@@ -9,6 +9,7 @@ print("Start preparing the Index file")
 for filename in os.listdir("Apps"):
     #print("Current file:",filename)
     if filename.endswith('.json') and filename != 'Index.json':
+        print("Record",filename,"into Index file.")
         with open("Apps/" + filename,"r",encoding="utf-8") as AppInfo:
             data = json.load(AppInfo)
             ThisAppInfo={
