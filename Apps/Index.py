@@ -23,7 +23,7 @@ for filename in os.listdir("Apps"):
     #print("Current file:",filename)
     if filename.endswith('.json') and filename != 'Index.json':
         print("Record",filename,"into Index file.")
-        with open("Apps\\" + filename,"r",encoding="utf-8") as AppInfo:
+        with open("Apps/" + filename,"r",encoding="utf-8") as AppInfo:
             data = json.load(AppInfo)
             ThisAppInfo={
                 "Name" : data['Name'],
@@ -32,7 +32,7 @@ for filename in os.listdir("Apps"):
                     "Name" : data['Author']['Name'],
                     "HomePage" : data['Author']['HomePage']
                 },
-                "Size" : DecodeSize(os.path.getsize("Apps\\" + os.path.splitext(filename)[0] + ".dll")),
+                "Size" : DecodeSize(os.path.getsize("Apps/" + os.path.splitext(filename)[0] + ".dll")),
                 "Desc" : data['Desc'],
                 "HomePage" : data['HomePage']
             }
