@@ -36,6 +36,4 @@ jobs:
           git status
           git add .
           git commit -m "Auto commit index file by action"
-          git branch -d dev
-          git branch dev
           git push
