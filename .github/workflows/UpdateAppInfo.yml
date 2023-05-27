@@ -27,7 +27,9 @@ jobs:
           python-version: '3.9'
 
       - name: Run Index.py
-        run: python Apps/Index.py
+        run: |
+          pip install requests
+          python Apps/Index.py
         
       - name: Commit changes
         run: |
