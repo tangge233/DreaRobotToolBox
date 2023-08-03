@@ -37,5 +37,5 @@ jobs:
           git config --local user.name "${{github.actor}}"
           git status
           git add .
-          git commit -m "Auto commit index file by action"
+          git commit -m "Auto commit by action"
           git push
