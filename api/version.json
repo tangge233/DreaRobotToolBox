@@ -1,12 +1,20 @@
 {
     "Release": {
         "ID": "2.1.0",
-        "Hash": "",
-        "Desc": "本次更新带来了一些新特性以及部分问题的修复"
+        "Hash": "D263BC6E82E7713689F2EE71DBDADF2B",
+        "Desc": "本次更新带来了一些新特性以及部分问题的修复",
+        "Down": {
+            "K": "iBaev14n6gof",
+            "P": "ggvi"
+        }
     },
     "Beta": {
         "ID": "2.1.0",
-        "Hash": "",
-        "Desc": "本次更新带来了一些新特性以及部分问题的修复"
+        "Hash": "D263BC6E82E7713689F2EE71DBDADF2B",
+        "Desc": "本次更新带来了一些新特性以及部分问题的修复",
+        "Down": {
+            "K": "iBaev14n6gof",
+            "P": "ggvi"
+        }
     }
 }
