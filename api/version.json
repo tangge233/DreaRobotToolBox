@@ -1,20 +1,20 @@
 {
     "Release": {
-        "ID": "2.1.1",
-        "Hash": "4F59623AAD8F3E29BDEB2974F7B81AA0",
-        "Desc": "本次更新带来了紧急问题的修复",
+        "ID": "2.1.2",
+        "Hash": "AD61BC8935B4611899A569B7AE61DD22",
+        "Desc": "本次更新带来了一些问题的修复以及基础更新",
         "Down": {
-            "K": "ifglA14sb5hc",
-            "P": "h65j"
+            "K": "iweja1gjifni",
+            "P": "cbsi"
         }
     },
     "Beta": {
-        "ID": "2.1.1",
-        "Hash": "4F59623AAD8F3E29BDEB2974F7B81AA0",
-        "Desc": "本次更新带来了紧急问题的修复",
+        "ID": "2.1.2",
+        "Hash": "AD61BC8935B4611899A569B7AE61DD22",
+        "Desc": "本次更新带来了一些问题的修复以及基础更新",
         "Down": {
-            "K": "ifglA14sb5hc",
-            "P": "h65j"
+            "K": "iweja1gjifni",
+            "P": "cbsi"
         }
     }
 }
